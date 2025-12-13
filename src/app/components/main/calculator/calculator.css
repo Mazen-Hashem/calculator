@@ -1,0 +1,68 @@
+/* ================================
+    Main Calculator Container
+================================ */
+.calculator {
+  width: 360px;
+  max-width: 100%;
+  padding: 18px;
+  border-radius: 16px;
+  background-color: var(--calc-panel);
+  box-shadow: var(--calc-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ================================
+    Display Screen Area
+================================ */
+.calculator .screen {
+  height: 80px;
+  padding: 14px;
+  border-radius: 12px;
+  color: var(--text);
+  background-color: var(--clac-glass);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+/* ================================
+    Scrollable Text Container
+================================ */
+.calculator .screen .scroll-box {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.calculator .screen .scroll-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================================
+    Text Inside the Scroll Area
+================================ */
+.calculator .screen .scroll-box .operation,
+.calculator .screen .scroll-box .result {
+  display: inline-block;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.calculator .screen .scroll-box .result {
+  font-weight: bold;
+}
+
+/* ================================
+    Buttons Grid Layout
+================================ */
+.calculator .btns-box {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}

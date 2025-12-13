@@ -1,0 +1,63 @@
+/* Base styling for all calculator buttons */
+.calculator .btns-box .btn {
+  background-color: var(--btn);
+  border: var(--border-btn);
+  padding: 14px;
+  color: var(--text);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateY(0.5px);
+  box-shadow: var(--unactive-btn);
+  grid-column: span 2; /* Button takes 2 grid columns by default */
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+/* Hover effect — removes shadow and resets vertical offset */
+.calculator .btns-box .btn:hover {
+  box-shadow: none;
+  transform: translateY(0);
+  transition: box-shadow 0s, transform 0s;
+}
+
+/* Pressed (active) effect — deeper shadow and stronger downward press */
+.calculator .btns-box .btn:active {
+  box-shadow: var(--active-btn);
+  transform: translateY(2px);
+}
+
+/* Operator buttons (÷ × − +) */
+.calculator .btns-box .op {
+  background: var(--op-btn);
+}
+
+/* Equal button (=) */
+.calculator .btns-box .eq {
+  background-color: var(--eq-btn);
+}
+
+/* Button takes 4 grid columns */
+.calculator .btns-box .g-4 {
+  grid-column: span 4;
+}
+
+/* Button takes 1 grid columns */
+.calculator .btns-box .g-1 {
+  grid-column: span 1;
+}
+
+/* Right half of a split button */
+.calculator .btns-box .r-side {
+  padding-right: 10px;
+  margin-right: -5px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Left half of a split button */
+.calculator .btns-box .l-side {
+  padding-left: 10px;
+  margin-left: -5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}

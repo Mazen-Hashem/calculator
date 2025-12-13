@@ -1,0 +1,9 @@
+header .container {
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+header .page-title {
+  color: var(--text);
+}

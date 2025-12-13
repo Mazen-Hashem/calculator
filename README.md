@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Calculator App
 
-## Getting Started
+![Project Screenshot](./public/images/project-screenshot.png)
 
-First, run the development server:
+A responsive, fully-featured calculator web app built with **Next.js 13**, **React**, and **Math.js**. This project includes basic arithmetic, advanced mathematical functions, history tracking, and a modern, interactive UI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📌 Project Context
+
+This project was developed as a **training project** at [ApexcifyTechnologys](https://apexifytechnologies.com/) company, to practice React, Next.js, and advanced JavaScript features.
+
+---
+
+## 🚀 Features
+
+- **Basic Operations**: Addition (+), Subtraction (−), Multiplication (×), Division (÷)
+- **Advanced Functions**: `sin`, `cos`, `tan`, `sqrt`, exponentiation (`^`), powers (`x²`), constants (`π`, `e`)
+- **Live Evaluation**: Preview calculation results before pressing equals
+- **Smart Delete**: Deletes entire functions like `sin(`, `cos(`, `tan(`, `sqrt(` in a single click
+- **Calculation History**: Track previous calculations in a scrollable sidebar
+- **Responsive Layout**: Works on desktops, tablets, and mobile devices
+- **Customizable Buttons**: Supports full-width, half-width, and multi-column buttons
+
+---
+
+## 🛠️ Technologies Used
+
+- **Next.js 13** for React-based app structure
+- **React Context API** for global state management (expression, result, history)
+- **Math.js** for safe and precise expression evaluation
+- **CSS Grid** for calculator button layout
+- **CSS Variables** for consistent theming and styling
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css       # Global styling and CSS variables
+│   ├── layout.jsx        # Root layout with CalculatorProvider
+│   ├── page.jsx          # Main page rendering Header, Main, Footer
+│   ├── app.css           # Main app wrapper styles
+│   └── components/
+│       ├── header/       # App header with title
+│       ├── main/         # Main content area
+│       │   ├── Calculator/ # Calculator component + buttons
+│       │   └── History/   # History panel + item components
+│       └── footer/       # Footer component
+├── context/
+│   └── CalculatorContext.jsx # Context provider for global calculator state
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ⚙️ Setup & Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
+```bash
+git clone https://github.com/Mazen-Hashem/ApexcifyTechnologys_calculator.git
+cd ApexcifyTechnologys_calculator
+```
+2. Install dependencies:
+```bash
+npm install
+```
+3. Start the development server:
+```bash
+npm run dev
+```
+4. Open the app in your browser at `http://localhost:3000`
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧩 Components Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### **CalculatorContext**
+- Provides `calculatorData` (expression, result) and `historyData` globally
+- Functions: `setCalculatorData` and `setHistoryData`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **Header**
+- Displays the app title `Calculator`
 
-## Deploy on Vercel
+### **Main**
+- Layout for `History` and `Calculator` components side by side (or stacked on mobile)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Calculator**
+- Handles all button actions and state updates
+- Features live evaluation and smart delete
+- Maps buttons from `buttonsData.jsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### **Buttons**
+- Reusable component with props: `className`, `dataAction`, `text`, `onClick`
+- Styled with CSS Grid, supports multi-column and half-width buttons
+
+### **History**
+- Scrollable list of previous calculations
+- Each item rendered by `Item` component
+
+### **Footer**
+- Static footer with copyright
+
+---
+
+## 🎨 Styling & Layout
+
+- **Theme**: Dark mode with CSS variables
+- **Layout**: Flexbox and CSS Grid
+- **Buttons**: Responsive, hover/active states, shadow effects
+- **Screen Display**: Scrollable expression with auto-scroll for long expressions
+
+---
+
+## 📌 Usage
+
+1. Click numbers and operators to build an expression
+2. Use `sin`, `cos`, `tan`, `sqrt`, `^`, `x²` for advanced calculations
+3. Press `=` to evaluate in the expression box and add it to the history.
+4. Use `AC` to clear, `DEL` for smart deletion
+5. View previous calculations in the History panel
+
+---
+
+## 🧪 Future Improvements
+
+- Keyboard input support
+- Dark/light theme toggle
+- Additional scientific functions (`log`, `ln`, factorial `!`)
+- Animations and visual effects for buttons
+
+---
+
+## 📜 License
+MIT License. All rights reserved.
