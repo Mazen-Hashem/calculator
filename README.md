@@ -8,7 +8,7 @@ A responsive, fully-featured calculator web app built with **Next.js 13**, **Rea
 
 ## 📌 Project Context
 
-This calculator was built to present my work as a **Frontend Web Developer**.
+This project was developed as a training on **Frontend Web Developer**, to practice React, Next.js, and advanced JavaScript features.
 
 ---
 
