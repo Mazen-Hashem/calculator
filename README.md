@@ -8,7 +8,7 @@ A responsive, fully-featured calculator web app built with **Next.js 13**, **Rea
 
 ## 📌 Project Context
 
-This project was developed as a **training project** at [ApexcifyTechnologys](https://apexifytechnologies.com/) company, to practice React, Next.js, and advanced JavaScript features.
+This calculator was built to present my work as a **Frontend Web Developer**.
 
 ---
 
